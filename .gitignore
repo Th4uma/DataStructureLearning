@@ -1,0 +1,26 @@
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# 编译产物
+bin/
+out/
+target/
+*.class
+
+# 报告与压缩包
+*.doc
+*.docx
+*.pdf
+*.7z
+
+# 可执行文件
+*.exe
+
+# 编译中间文件
+*.o
+*.out
+
+# 临时文件
+*.log
