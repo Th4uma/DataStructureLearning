@@ -1,26 +1,16 @@
-# IDE
-.vscode/
-.idea/
-*.iml
+# 1. 忽略所有文件
+*
 
-# 编译产物
-bin/
-out/
-target/
-*.class
+# 2. 排除（不忽略）所有的目录，确保 Git 能递归扫描
+!*/
 
-# 报告与压缩包
-*.doc
-*.docx
-*.pdf
-*.7z
+# 3. 排除（不忽略）特定的源代码文件类型
+!*.c
+!*.h
+!*.cpp
+!*.hpp
 
-# 可执行文件
-*.exe
-
-# 编译中间文件
-*.o
-*.out
-
-# 临时文件
-*.log
+# 4. 排除（不忽略）必要的配置文件
+!.gitignore
+!Makefile
+!README.md
