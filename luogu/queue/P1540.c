@@ -9,14 +9,14 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&s);
         y=0;
-        for(int i=head;i<=tail;i++){
-            if(q[i]==s){
+        for(int j=head;j<=tail;j++){
+            if(q[j]==s){
                 y++;
             }
         }
         if(y==0){
             ans++;
-            if(tail-head==m){
+            if(tail-head+1==m){
                 head++;
                 tail++;
                 q[tail]=s;
