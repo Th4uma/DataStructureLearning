@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int n,ansd,answ,a,b,x,y,w[100001],ansjl=1000000000;
+int n,ansd,answ,a,b,x,y,w[1000001],ansjl=1000000000;
 typedef struct node {
     int l,r,f;
 }node;
@@ -22,7 +22,7 @@ void dist(int sy,int last,int mb,int jl){
     }
     if(last!=m[sy].l) dist(m[sy].l,sy,mb,jl+1);
     if(last!=m[sy].r) dist(m[sy].r,sy,mb,jl+1);
-    if(last!=m[sy].f) dist(m[sy].f,sy,mb,jl+1);
+    if(last!=m[sy].f) dist(m[sy].f,sy,mb,jl+2);
 }
 
 int main(){
@@ -32,15 +32,9 @@ int main(){
     }
     for(int i=1;i<n;i++){
         scanf("%d%d",&a,&b);
-        if(a<b){
-            m[b].f=a;
-            if(m[a].l==0) m[a].l=b;
-            else m[a].r=b;
-        }else{
-            m[a].f=b;
-            if(m[b].l==0) m[b].l=a;
-            else m[b].r=a;
-        }
+        m[b].f=a;
+        if(m[a].l==0) m[a].l=b;
+        else m[a].r=b;
     }
     scanf("%d%d",&x,&y);
     dfs(1,1);
