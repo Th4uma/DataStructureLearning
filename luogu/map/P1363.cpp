@@ -61,7 +61,6 @@ int main()
         memset(visited, 0, sizeof(visited));
         memset(px, 0, sizeof(px));
         memset(py, 0, sizeof(py));
-        scanf("%d%d", &n, &m);
         for (int i = 1; i <= n; i++)
         {
             for (int j = 1; j <= m; j++)
